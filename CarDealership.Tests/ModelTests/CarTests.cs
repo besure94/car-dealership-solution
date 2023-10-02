@@ -2,6 +2,7 @@ using CarDealership.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace CarDealership.Tests
 {
@@ -70,6 +71,14 @@ namespace CarDealership.Tests
       string updatedModel = "Camaro";
       newCar.Model = updatedModel;
       string result = newCar.Model;
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyListOfCars_CarList()
+    {
+      List<Car> newList = new List<Car> { };
+      List<Car> result = Car.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
