@@ -42,5 +42,15 @@ namespace CarDealership.Tests
       string result = newCar.Make;
       Assert.AreEqual(make, result);
     }
+
+    [TestMethod]
+    public void SetMake_SetYear_String()
+    {
+      string make = "Toyota";
+      Car newCar = new Car(1999, make);
+      string updatedMake = "Honda";
+      newCar.Make = updatedMake;
+      string result = newCar.Make;
+    }
   }
 }
