@@ -14,11 +14,17 @@ namespace CarDealership.Models
       Year = year;
       Make = make;
       Model = model;
+      _instances.Add(this);
     }
 
     public static List<Car> GetAll()
     {
       return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }

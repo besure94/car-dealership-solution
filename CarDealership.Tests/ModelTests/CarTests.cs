@@ -7,8 +7,13 @@ using Microsoft.AspNetCore.Http.Features;
 namespace CarDealership.Tests
 {
   [TestClass]
-  public class CarTests
+  public class CarTests : IDisposable
   {
+    public void Dispose()
+    {
+      Car.ClearAll();
+    }
+
     [TestMethod]
     public void CarConstructor_CreatesInstanceOfCar_Car()
     {
@@ -33,6 +38,7 @@ namespace CarDealership.Tests
       int updatedYear = 1999;
       newCar.Year = updatedYear;
       int result = newCar.Year;
+      Assert.AreEqual(updatedYear, result);
     }
 
     [TestMethod]
@@ -52,6 +58,7 @@ namespace CarDealership.Tests
       string updatedMake = "Honda";
       newCar.Make = updatedMake;
       string result = newCar.Make;
+      Assert.AreEqual(updatedMake, result);
     }
 
     [TestMethod]
@@ -71,12 +78,33 @@ namespace CarDealership.Tests
       string updatedModel = "Camaro";
       newCar.Model = updatedModel;
       string result = newCar.Model;
+      Assert.AreEqual(updatedModel, result);
     }
 
     [TestMethod]
     public void GetAll_ReturnsEmptyListOfCars_CarList()
     {
       List<Car> newList = new List<Car> { };
+      List<Car> result = Car.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsCars_CarList()
+    {
+      int year01 = 1970;
+      int year02 = 1999;
+      int year03 = 2023;
+      string make01 = "Chevrolet";
+      string make02 = "Toyota";
+      string make03 = "Lincoln";
+      string model01 = "Impala";
+      string model02 = "Corolla";
+      string model03 = "Navigator";
+      Car newCar01 = new Car(year01, make01, model01);
+      Car newCar02 = new Car(year02, make02, model02);
+      Car newCar03 = new Car(year03, make03, model03);
+      List<Car> newList = new List<Car> { newCar01, newCar02, newCar03 };
       List<Car> result = Car.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
