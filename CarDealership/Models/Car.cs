@@ -4,7 +4,7 @@ namespace CarDealership.Models
 {
   public class Car
   {
-    public int Year {get; }
+    public int Year {get; set; }
 
     public Car(int year)
     {
