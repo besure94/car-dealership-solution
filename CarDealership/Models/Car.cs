@@ -6,11 +6,13 @@ namespace CarDealership.Models
   {
     public int Year {get; set; }
     public string Make { get; set; }
+    public string Model { get; }
 
-    public Car(int year, string make)
+    public Car(int year, string make, string model)
     {
       Year = year;
       Make = make;
+      Model = model;
     }
   }
 }
