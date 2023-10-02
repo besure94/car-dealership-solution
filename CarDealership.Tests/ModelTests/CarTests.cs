@@ -61,5 +61,15 @@ namespace CarDealership.Tests
       string result = newCar.Model;
       Assert.AreEqual(model, result);
     }
+
+    [TestMethod]
+    public void SetModel_SetModel_String()
+    {
+      string model = "Impala";
+      Car newCar = new Car(1970, "Chevrolet", model);
+      string updatedModel = "Camaro";
+      newCar.Model = updatedModel;
+      string result = newCar.Model;
+    }
   }
 }
