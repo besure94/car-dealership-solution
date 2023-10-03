@@ -9,28 +9,30 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous">
   </head>
-  <body>
-    @using CarDealership.Models;
+  <div class="container">
+    <body>
+      @using CarDealership.Models;
 
-    <h1>Car Listings</h1>
+      <h1>Car Listings</h1>
 
-    @if (Model.Count == 0)
-    {
-      <p>There are no cars in the list.</p>
-    }
-    <ul>
-      @foreach (Car car in Model)
+      @if (Model.Count == 0)
       {
-        <li>@car.Year @car.Make @car.Model</li>
+        <p>There are no cars in the list.</p>
       }
-    </ul>
-    <a href="/cars/new">Add a new car listing</a>
-    <br>
-    <a href="/">Return to home page</a>
-    <br>
-    <br>
-    <form action="/cars/delete" method="post">
-      <button type="submit" name="button">Clear All Listings</button>
-    </form>
-  </body>
+      <ul>
+        @foreach (Car car in Model)
+        {
+          <li>@car.Year @car.Make @car.Model</li>
+        }
+      </ul>
+      <a href="/cars/new">Add a new car listing</a>
+      <br>
+      <a href="/">Return to home page</a>
+      <br>
+      <br>
+      <form action="/cars/delete" method="post">
+        <button type="submit" name="button">Clear All Listings</button>
+      </form>
+    </body>
+  </div>
 </html>
