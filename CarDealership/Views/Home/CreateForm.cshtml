@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Car Dealership</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Create Car Listing</h1>
+    <p>Enter the information for the car below (example: 1968 Ford):</p>
+    <form action="/cars" method="post">
+      <label for="year">Year:</label>
+      <input id="year" name="year" type="number" min="1886">
+      <br>
+      <label for="make">Make:</label>
+      <input id="make" name="make" type="text">
+      <br>
+      <label for="model">Model:</label>
+      <input id="model" name="model" type="text">
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
