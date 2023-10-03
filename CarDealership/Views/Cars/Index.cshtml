@@ -24,8 +24,14 @@
         <li>@car.Year @car.Make @car.Model</li>
       }
     </ul>
+    <br>
     <a href="/cars/new">Add a new car listing</a>
     <br>
     <a href="/">Return to home page</a>
+    <br>
+    <br>
+    <form action="/cars/delete" method="post">
+      <button type="submit" name="button">Clear All Listings</button>
+    </form>
   </body>
 </html>
