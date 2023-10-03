@@ -108,5 +108,16 @@ namespace CarDealership.Tests
       List<Car> result = Car.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void ClearAll_DeletesAllCarsInList_Void()
+    {
+      Car car01 = new Car(1982, "Chevrolet", "Camaro");
+      Car car02 = new Car(2004, "Ford", "Fusion");
+      Car car03 = new Car(2016, "Hyundai", "Elantra");
+      List<Car> expected = new List<Car> { };
+      Car.ClearAll();
+      CollectionAssert.AreEqual(expected, Car.GetAll());
+    }
   }
 }
