@@ -1,0 +1,47 @@
+a {
+  font-weight: 700;
+}
+
+body {
+  background-color: #0b090a;
+}
+
+button {
+  background-color: #0466c8;
+  color: #0b090a;
+  font-weight: 700;
+}
+
+h1 {
+  color: #0466c8;
+  font-weight: bold;
+}
+
+h2 {
+  color:#0466c8;
+  font-weight: bold;
+}
+
+hr {
+  color: #0466c8;
+}
+
+input {
+  background-color: #ced4da;
+  font-weight: 700;
+}
+
+label {
+  color:#0466c8;
+  font-weight: 700;
+}
+
+p {
+  color:#0466c8;
+  font-weight: 700;
+}
+
+ul {
+  color: #0466c8;
+  font-weight: 700;
+}
