@@ -15,15 +15,15 @@
       <p>Enter the information for the car below (example: 1968 Ford Thunderbird):</p>
       <form action="/cars" method="post">
         <label for="year">Year:</label>
-        <input id="year" name="year" type="number" min="1886">
+        <input id="year" name="year" type="number" min="1886" required>
         <br>
         <br>
         <label for="make">Make:</label>
-        <input id="make" name="make" type="text">
+        <input id="make" name="make" type="text" required>
         <br>
         <br>
         <label for="model">Model:</label>
-        <input id="model" name="model" type="text">
+        <input id="model" name="model" type="text" required>
         <br>
         <br>
         <button type="submit">Submit</button>
