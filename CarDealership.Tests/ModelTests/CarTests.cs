@@ -119,5 +119,6 @@ namespace CarDealership.Tests
       Car.ClearAll();
       CollectionAssert.AreEqual(expected, Car.GetAll());
     }
+
   }
 }
